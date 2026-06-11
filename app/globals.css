@@ -1,0 +1,119 @@
+@import "./styles/v2-design-system.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ASOPADRES Brand — Primary Blue */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Azul institucional #003DA5 */
+    --primary: 220 100% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 25% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Dorado accent #C9A84C */
+    --accent: 40 50% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Rojo salesiano #C8102E */
+    --destructive: 349 87% 42%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 100% 32%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 210 20% 98%;
+    --card: 222 47% 10%;
+    --card-foreground: 210 20% 98%;
+    --popover: 222 47% 10%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 220 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 220 25% 18%;
+    --muted-foreground: 220 9% 64%;
+    --accent: 40 50% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 349 87% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 25% 18%;
+    --input: 220 25% 18%;
+    --ring: 220 100% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand-blue/30 rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient overlay for hero images */
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+  }
+
+  /* Section reveal animation */
+  .reveal {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+
+  .reveal.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}

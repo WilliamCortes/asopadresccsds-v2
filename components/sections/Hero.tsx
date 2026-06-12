@@ -14,7 +14,7 @@ export function Hero({ locale }: HeroProps) {
     <section className="hero">
       <div className="hero-bg">
         <Image
-          src="/images/colegio_edificio.png"
+          src="/images/colegio_2.png"
           alt="Fachada del Colegio Campestre Santo Domingo Savio"
           fill
           priority

@@ -33,7 +33,7 @@ export function Problema() {
 
           <div className="problema-img reveal delay-2">
             <Image
-              src="/images/cancha_actual_colegio.png"
+              src="/images/cancha_actual_invierno.png"
               alt="Cancha actual a la intemperie del Colegio Campestre Santo Domingo Savio"
               fill
               className="img-cover"

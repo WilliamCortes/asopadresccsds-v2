@@ -70,7 +70,7 @@ function AboutContent({ locale }: { locale: string }) {
         <div>
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-6">
             <Image
-              src="/images/colegio_edificio.png"
+              src="/images/colegio_2.png"
               alt="Colegio Campestre Santo Domingo Savio"
               fill
               className="object-cover"

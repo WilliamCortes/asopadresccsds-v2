@@ -42,7 +42,7 @@ export function ProjectTeaser({ locale }: ProjectTeaserProps) {
         <div className="proyecto-compare">
           <div className="compare-item reveal delay-1">
             <span className="label">{t("compare_today")}</span>
-            <Image src="/images/proyecto_cancha.jpg" alt="Cancha actual" fill className="img-cover" />
+            <Image src="/images/cancha_actual_colegio.png" alt="Cancha actual" fill className="img-cover" />
           </div>
           <div className="compare-item future reveal delay-2">
             <span className="label">{t("compare_future")}</span>

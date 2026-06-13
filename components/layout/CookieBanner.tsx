@@ -44,9 +44,9 @@ export function CookieBanner({ locale, isEU = false }: CookieBannerProps) {
       role="dialog"
       aria-label="Cookie consent"
     >
-      <div className="max-w-4xl mx-auto bg-white border border-border rounded-xl shadow-xl p-4 sm:p-6">
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex-1 min-w-0">
+      <div className="relative max-w-4xl mx-auto bg-white border border-border rounded-xl shadow-xl p-4 sm:p-6">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+          <div className="flex-1 min-w-0 pr-6 sm:pr-0">
             <div className="flex items-center gap-2 mb-1">
               <p className="font-semibold text-sm text-foreground">
                 ASOPADRES CCSDS — Cookies
@@ -73,25 +73,33 @@ export function CookieBanner({ locale, isEU = false }: CookieBannerProps) {
             </p>
           </div>
 
+          <button
+            onClick={decline}
+            className="absolute top-4 right-4 sm:hidden p-1 rounded-md text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Cerrar"
+          >
+            <X className="h-4 w-4" />
+          </button>
+
           <div className="flex items-center gap-2 flex-shrink-0">
             <Button
               variant="outline"
               size="sm"
               onClick={decline}
-              className="text-xs border-border"
+              className="flex-1 sm:flex-initial text-xs border-border"
             >
               {t("decline")}
             </Button>
             <Button
               size="sm"
               onClick={accept}
-              className="text-xs bg-brand-blue hover:bg-brand-blue-dark text-white"
+              className="flex-1 sm:flex-initial text-xs bg-brand-blue hover:bg-brand-blue-dark text-white"
             >
               {t("accept")}
             </Button>
             <button
               onClick={decline}
-              className="p-1 rounded-md text-muted-foreground hover:text-foreground transition-colors"
+              className="hidden sm:block p-1 rounded-md text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Cerrar"
             >
               <X className="h-4 w-4" />

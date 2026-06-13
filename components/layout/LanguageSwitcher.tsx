@@ -27,11 +27,12 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   };
 
   return (
-    <div className={cn("relative", className)}>
+    <div className={cn("nav-lang-wrap", className)}>
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 text-sm font-medium transition-colors px-2 py-1 rounded-md hover:opacity-70"
+        className="nav-lang-toggle"
         aria-label="Cambiar idioma / Change language"
+        aria-expanded={open}
       >
         <Globe className="h-4 w-4" />
         <span className="uppercase">{locale}</span>
@@ -39,23 +40,16 @@ export function LanguageSwitcher({ className }: { className?: string }) {
 
       {open && (
         <>
-          <div
-            className="fixed inset-0 z-40"
-            onClick={() => setOpen(false)}
-          />
-          <div className="absolute right-0 top-full mt-1 z-50 min-w-[120px] rounded-lg border border-border bg-background shadow-lg py-1">
+          <div className="nav-lang-backdrop" onClick={() => setOpen(false)} />
+          <div className="nav-lang-menu" role="menu">
             {LOCALES.map((l) => (
               <button
                 key={l.code}
+                role="menuitem"
                 onClick={() => switchLocale(l.code)}
-                className={cn(
-                  "w-full text-left px-3 py-2 text-sm hover:bg-muted transition-colors flex items-center gap-2",
-                  locale === l.code && "text-brand-blue font-medium"
-                )}
+                className={cn("nav-lang-option", locale === l.code && "is-active")}
               >
-                <span className="font-mono text-xs uppercase text-muted-foreground w-6">
-                  {l.label}
-                </span>
+                <span className="nav-lang-option-code">{l.label}</span>
                 <span>{l.full}</span>
               </button>
             ))}

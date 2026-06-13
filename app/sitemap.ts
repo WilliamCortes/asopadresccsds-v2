@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             "es-CO": `${BASE_URL}/es${page.es}`,
             en: `${BASE_URL}/en${page.en}`,
             fr: `${BASE_URL}/fr${page.fr}`,
+            "x-default": `${BASE_URL}/es${page.es}`,
           },
         },
       });

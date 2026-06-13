@@ -118,6 +118,7 @@ export default async function LocaleLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": ["NGO", "Organization"],
+    "@id": "https://asopadresccsds.org/#organization",
     name:
       locale === "es"
         ? "Asociación de Padres de Familia CCSDS"
@@ -126,10 +127,18 @@ export default async function LocaleLayout({
         : "Parents Association CCSDS",
     legalName:
       "ASOCIACION DE PADRES DE FAMILIA DEL COLEGIO CAMPESTRE SANTO DOMINGO SAVIO",
+    alternateName: "ASOPADRES CCSDS",
+    slogan:
+      locale === "es"
+        ? "Familias que construyen el futuro de sus hijos."
+        : locale === "fr"
+        ? "Des familles qui construisent l'avenir de leurs enfants."
+        : "Families building their children's future.",
     taxID: "901.740.513-1",
     foundingDate: "2023-05-19",
-    url: "https://asopadresccsds.org",
+    url: `https://asopadresccsds.org/${locale}`,
     logo: "https://asopadresccsds.org/images/logo_asopadres.png",
+    image: "https://asopadresccsds.org/images/og-image.jpg",
     contactPoint: {
       "@type": "ContactPoint",
       email: "asociaciondepadresdefamilia@ccsds.edu.co",
@@ -144,6 +153,10 @@ export default async function LocaleLayout({
       addressRegion: "Cundinamarca",
       addressCountry: "CO",
     },
+    areaServed: [
+      { "@type": "Country", name: "Colombia" },
+      { "@type": "AdministrativeArea", name: "European Union" },
+    ],
     knowsAbout: [
       "Educación",
       "Padres de familia",
@@ -155,6 +168,39 @@ export default async function LocaleLayout({
       name: "Colegio Campestre Santo Domingo Savio",
       url: "https://www.ccsds.edu.co",
     },
+    potentialAction: {
+      "@type": "DonateAction",
+      name:
+        locale === "es"
+          ? "Donar al proyecto de la cancha cubierta"
+          : locale === "fr"
+          ? "Faire un don pour le terrain de sport couvert"
+          : "Donate to the covered sports court project",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate:
+          locale === "es"
+            ? "https://asopadresccsds.org/es/proyecto-cancha"
+            : locale === "fr"
+            ? "https://asopadresccsds.org/fr/projet-terrain-couvert"
+            : "https://asopadresccsds.org/en/covered-court-project",
+        actionPlatform: [
+          "https://schema.org/DesktopWebPlatform",
+          "https://schema.org/MobileWebPlatform",
+        ],
+      },
+    },
+  };
+
+  // WebSite Schema.org structured data
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://asopadresccsds.org/#website",
+    url: "https://asopadresccsds.org",
+    name: "ASOPADRES CCSDS",
+    publisher: { "@id": "https://asopadresccsds.org/#organization" },
+    inLanguage: locale,
   };
 
   return (
@@ -167,6 +213,10 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
         />
       </head>
       <body className="v2 font-sans antialiased">

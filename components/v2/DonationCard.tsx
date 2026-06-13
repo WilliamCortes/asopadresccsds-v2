@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import Script from "next/script";
 
@@ -10,6 +10,13 @@ interface DonationCardProps {
 
 interface WompiCheckoutResult {
   transaction?: { id: string; status: string };
+}
+
+interface PayPalActions {
+  order: {
+    create: (config: object) => Promise<string>;
+    capture: () => Promise<unknown>;
+  };
 }
 
 declare global {
@@ -22,6 +29,13 @@ declare global {
       signature: { integrity: string };
       redirectUrl: string;
     }) => { open: (callback: (result: WompiCheckoutResult) => void) => void };
+    paypal?: {
+      Buttons: (options: {
+        style?: Record<string, unknown>;
+        createOrder: (data: unknown, actions: PayPalActions) => Promise<string>;
+        onApprove: (data: unknown, actions: PayPalActions) => Promise<unknown>;
+      }) => { render: (container: HTMLElement) => void };
+    };
   }
 }
 
@@ -39,6 +53,33 @@ export function DonationCard({ currency }: DonationCardProps) {
     currency === "cop" ? `$${n.toLocaleString("es-CO")}` : `€${n}`;
 
   const isCop = currency === "cop";
+
+  const amountRef = useRef(amounts[1]);
+  const paypalContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    amountRef.current = active ?? (parseInt(custom, 10) || 0);
+  }, [active, custom]);
+
+  const handlePaypalLoad = () => {
+    if (!window.paypal || !paypalContainerRef.current) return;
+    paypalContainerRef.current.innerHTML = "";
+    window.paypal
+      .Buttons({
+        style: { layout: "horizontal", color: "gold", tagline: false, height: 45 },
+        createOrder: (_data, actions) =>
+          actions.order.create({
+            purchase_units: [
+              {
+                description: "Donación - Cancha Cubierta ASOPADRES CCSDS",
+                amount: { currency_code: "EUR", value: amountRef.current.toFixed(2) },
+              },
+            ],
+          }),
+        onApprove: (_data, actions) => actions.order.capture(),
+      })
+      .render(paypalContainerRef.current);
+  };
 
   const handleDonate = async () => {
     const amount = active ?? parseInt(custom, 10);
@@ -123,12 +164,23 @@ export function DonationCard({ currency }: DonationCardProps) {
         </span>
       </div>
 
-      <button type="button" className="btn btn-primary" onClick={handleDonate} disabled={loading}>
-        {t(isCop ? "cop_cta" : "intl_cta")}
-        <svg className="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
-      </button>
+      {isCop ? (
+        <button type="button" className="btn btn-primary" onClick={handleDonate} disabled={loading}>
+          {t("cop_cta")}
+          <svg className="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
+        </button>
+      ) : (
+        <div ref={paypalContainerRef} className="paypal-button-container" />
+      )}
 
       {isCop && <Script src="https://checkout.wompi.co/widget.js" strategy="lazyOnload" />}
+      {!isCop && (
+        <Script
+          src={`https://www.paypal.com/sdk/js?client-id=${process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID}&currency=EUR`}
+          strategy="lazyOnload"
+          onLoad={handlePaypalLoad}
+        />
+      )}
     </article>
   );
 }

@@ -946,6 +946,7 @@ html { scroll-behavior: smooth; }
 .v2 .dcard-meta-item svg { width: 13px; height: 13px; color: var(--verde); }
 .v2 .dcard .btn { width: 100%; padding: 14px; }
 .v2 .dcard.intl h3 { font-style: italic; }
+.v2 .dcard .paypal-button-container { width: 100%; min-height: 45px; }
 
 .v2 .donar-legal {
   text-align: center;

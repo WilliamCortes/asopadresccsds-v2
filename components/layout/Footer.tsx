@@ -62,7 +62,7 @@ export function Footer({ locale }: FooterProps) {
               </li>
               <li className="contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M10 13a5 5 0 007 0l3-3a5 5 0 10-7-7l-1 1M14 11a5 5 0 00-7 0l-3 3a5 5 0 107 7l1-1"/></svg>
-                <a href="https://ccsds.edu.co" target="_blank" rel="noopener noreferrer">{t("school_link")}</a>
+                <a href="https://www.ccsds.edu.co/" target="_blank" rel="noopener noreferrer">{t("school_link")}</a>
               </li>
             </ul>
           </div>

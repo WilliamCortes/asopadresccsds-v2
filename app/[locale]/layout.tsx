@@ -128,7 +128,7 @@ export default async function LocaleLayout({
     taxID: "901.740.513-1",
     foundingDate: "2023-05-19",
     url: "https://asopadresccsds.org",
-    logo: "https://asopadresccsds.org/images/logo_asopadres.jpg",
+    logo: "https://asopadresccsds.org/images/logo_asopadres.png",
     contactPoint: {
       "@type": "ContactPoint",
       email: "asociaciondepadresdefamilia@ccsds.edu.co",

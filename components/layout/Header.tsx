@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -46,7 +47,9 @@ export function Header({ locale }: HeaderProps) {
       <header className={`nav ${stuck ? "is-stuck" : "is-floating"}`} id="nav">
         <div className="nav-inner">
           <Link className="nav-brand" href={`/${locale}`} aria-label="ASOPADRES CCSDS">
-            <span className="nav-brand-mark" aria-hidden="true">A</span>
+            <span className="nav-brand-mark" aria-hidden="true">
+              <Image src="/images/logo_asopadres.png" alt="" width={38} height={38} />
+            </span>
             <span className="nav-brand-text">
               ASOPADRES CCSDS
               <small>{t("brand_sub")}</small>

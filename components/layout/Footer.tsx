@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 
 interface FooterProps {
@@ -23,7 +24,9 @@ export function Footer({ locale }: FooterProps) {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <span className="nav-brand-mark" aria-hidden="true">A</span>
+            <span className="nav-brand-mark" aria-hidden="true">
+              <Image src="/images/logo_asopadres.png" alt="" width={56} height={56} />
+            </span>
             <h4>{t("legal_name_title")}</h4>
             <p>{t("description")}</p>
             <p className="nit">{t("nit")} · {t("ccf")}</p>

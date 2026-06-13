@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import { V2Effects } from "@/components/v2/Effects";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import "../globals.css";
 
 const inter = Inter({
@@ -175,6 +176,7 @@ export default async function LocaleLayout({
           <Footer locale={locale} />
           <CookieBanner locale={locale} isEU={isEU} />
           <V2Effects />
+          <WhatsAppButton />
         </NextIntlClientProvider>
       </body>
     </html>

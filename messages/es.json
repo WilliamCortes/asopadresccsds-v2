@@ -449,7 +449,8 @@
     "required_fields": "Los campos marcados con * son obligatorios",
     "independent_entity": "Entidad independiente del Colegio",
     "esal_badge": "ESAL — Sin ánimo de lucro",
-    "registered": "Registrada en CCF"
+    "registered": "Registrada en CCF",
+    "whatsapp_message": "Hola, quiero más información sobre la Asociación de Padres de Familia CCSDS y el proyecto de la cancha cubierta."
   },
   "home_v2": {
     "hero": {

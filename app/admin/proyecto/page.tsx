@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Save } from "lucide-react";
 
 export default function ProyectoAdmin() {
-  const [goal, setGoal] = useState(50000000);
+  const [goal, setGoal] = useState(500000000);
   const [raised, setRaised] = useState(0);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);

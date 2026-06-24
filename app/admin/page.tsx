@@ -33,7 +33,7 @@ const STATS = [
   {
     label: "Meta cancha cubierta",
     value: "0%",
-    sub: "De $50.000.000 COP",
+    sub: "De $500.000.000 COP",
     icon: TrendingUp,
     color: "text-brand-red",
     bg: "bg-brand-red/8",

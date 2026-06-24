@@ -148,7 +148,7 @@ export default async function LocaleLayout({
     contactPoint: {
       "@type": "ContactPoint",
       email: "asociaciondepadresdefamilia@ccsds.edu.co",
-      telephone: "+573152252936",
+      telephone: "+573204413330",
       contactType: "customer support",
       availableLanguage: ["Spanish", "English", "French"],
     },

@@ -385,9 +385,9 @@
       "email_label": "Correo oficial",
       "email": "asociaciondepadresdefamilia@ccsds.edu.co",
       "phone_label": "WhatsApp principal",
-      "phone": "+57 315 2252936",
+      "phone": "+57 320 4413330",
       "phone2_label": "WhatsApp alternativo",
-      "phone2": "+57 310 3712769",
+      "phone2": "+57 320 4413330",
       "address_label": "Dirección",
       "address": "Vereda La María, Sitio Los Veleños, Anolaima, Cundinamarca, Colombia",
       "watchdog_label": "Entidad vigilante",
@@ -495,7 +495,7 @@
       "lead": "Un espacio que también sirva para teatro, música, eventos comunitarios y presentaciones. Donde los 200 estudiantes del CCSDS puedan desarrollarse sin importar el clima.",
       "goal_label": "Meta",
       "raised_label": "Recaudado",
-      "progress_text": "0 de 50 millones",
+      "progress_text": "0 de 500 millones",
       "progress_percent": "0% completado",
       "compare_today": "Hoy",
       "compare_future": "Mañana con tu apoyo",
@@ -581,7 +581,7 @@
       "schedule_k": "Cronograma",
       "schedule_v": "12 meses desde aprobación de presupuesto",
       "budget_k": "Presupuesto",
-      "budget_v": "$50.000.000 COP (≈ €11.500)"
+      "budget_v": "$500.000.000 COP (≈ €115.000)"
     },
     "timeline": {
       "eyebrow": "Hoja de ruta",
@@ -616,7 +616,7 @@
       "a1": "La Asamblea General de ASOPADRES CCSDS, a través de su Junta Directiva. Cada movimiento se registra en acta y es auditable por cualquier afiliado o ente de control. Los recursos están en cuenta bancaria separada a nombre de la asociación (NIT 901.740.513-1).",
       "q2": "¿Mi aporte es deducible de impuestos?",
       "a2": "En Colombia: sí, ASOPADRES es una ESAL registrada y emite certificado de donación. Para donantes internacionales: la deducibilidad depende del país y del convenio fiscal correspondiente — consulta con tu asesor tributario.",
-      "q3": "¿Por qué $50 millones COP y no más?",
+      "q3": "¿Por qué $500 millones COP y no más?",
       "a3": "El presupuesto corresponde a un diseño realista para 720 m² con materiales locales y mano de obra de la región. No incluye lujos ni elementos innecesarios. Es el monto mínimo para una estructura digna y duradera.",
       "q4": "¿Qué pasa si recaudan más de la meta?",
       "a4": "Los excedentes se destinan, por mandato estatutario, al mantenimiento de la cancha y a otros proyectos aprobados por la Asamblea. Nada se queda sin uso definido.",

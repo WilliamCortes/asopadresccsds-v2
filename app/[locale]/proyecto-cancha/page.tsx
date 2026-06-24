@@ -75,7 +75,7 @@ export default async function ProyectoCanchaPage({ params }: Props) {
             <div className="progress-meta">
               <div>
                 <div className="meta-label">{t("progress.goal_label")}</div>
-                <strong>$50.000.000 COP</strong>
+                <strong>$500.000.000 COP</strong>
               </div>
               <div style={{ textAlign: "center" }}>
                 <div className="meta-label">{t("progress.raised_label")}</div>

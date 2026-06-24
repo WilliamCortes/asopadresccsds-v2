@@ -385,9 +385,9 @@
       "email_label": "Official email",
       "email": "asociaciondepadresdefamilia@ccsds.edu.co",
       "phone_label": "Main WhatsApp",
-      "phone": "+57 315 2252936",
+      "phone": "+57 320 4413330",
       "phone2_label": "Alternative WhatsApp",
-      "phone2": "+57 310 3712769",
+      "phone2": "+57 320 4413330",
       "address_label": "Address",
       "address": "Vereda La María, Sitio Los Veleños, Anolaima, Cundinamarca, Colombia",
       "watchdog_label": "Supervisory entity",
@@ -495,7 +495,7 @@
       "lead": "A space that can also be used for theater, music, community events and performances — where the 200 students of CCSDS can grow, regardless of the weather.",
       "goal_label": "Goal",
       "raised_label": "Raised",
-      "progress_text": "0 of 50 million",
+      "progress_text": "0 of 500 million",
       "progress_percent": "0% complete",
       "compare_today": "Today",
       "compare_future": "Tomorrow, with your support",
@@ -581,7 +581,7 @@
       "schedule_k": "Schedule",
       "schedule_v": "12 months from budget approval",
       "budget_k": "Budget",
-      "budget_v": "$50,000,000 COP (≈ €11,500)"
+      "budget_v": "$500,000,000 COP (≈ €115,000)"
     },
     "timeline": {
       "eyebrow": "Roadmap",
@@ -616,7 +616,7 @@
       "a1": "The General Assembly of ASOPADRES CCSDS, through its Board of Directors. Every transaction is recorded in minutes and can be audited by any member or oversight body. Funds are held in a separate bank account under the association's name (Tax ID 901.740.513-1).",
       "q2": "Is my contribution tax-deductible?",
       "a2": "In Colombia: yes, ASOPADRES is a registered non-profit (ESAL) and issues donation certificates. For international donors: deductibility depends on your country and the applicable tax treaty — please check with your tax advisor.",
-      "q3": "Why $50 million COP and not more?",
+      "q3": "Why $500 million COP and not more?",
       "a3": "The budget corresponds to a realistic design for 720 m² using local materials and regional labor. It includes no luxuries or unnecessary elements. It is the minimum amount for a dignified, durable structure.",
       "q4": "What happens if you raise more than the goal?",
       "a4": "By statutory mandate, any surplus is allocated to maintaining the court and to other projects approved by the Assembly. Nothing is left without a defined use.",

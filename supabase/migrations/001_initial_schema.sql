@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS contenido (
 CREATE TABLE IF NOT EXISTS proyecto_progreso (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   project_key TEXT UNIQUE NOT NULL DEFAULT 'cancha_cubierta',
-  goal_amount NUMERIC(12, 2) NOT NULL DEFAULT 50000000,
+  goal_amount NUMERIC(12, 2) NOT NULL DEFAULT 1000000000,
   current_amount NUMERIC(12, 2) DEFAULT 0,
   currency TEXT DEFAULT 'COP',
   description_es TEXT,
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS proyecto_progreso (
 
 -- Insert default project
 INSERT INTO proyecto_progreso (project_key, goal_amount, current_amount)
-VALUES ('cancha_cubierta', 50000000, 0)
+VALUES ('cancha_cubierta', 1000000000, 0)
 ON CONFLICT (project_key) DO NOTHING;
 
 -- ============================================================

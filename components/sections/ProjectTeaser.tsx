@@ -23,7 +23,7 @@ export function ProjectTeaser({ locale }: ProjectTeaserProps) {
           <div className="progress-meta">
             <div>
               <div className="meta-label">{t("goal_label")}</div>
-              <strong>$500.000.000 COP</strong>
+              <strong>$1.000.000.000 COP</strong>
             </div>
             <div style={{ textAlign: "right" }}>
               <div className="meta-label">{t("raised_label")}</div>

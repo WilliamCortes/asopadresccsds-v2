@@ -51,7 +51,8 @@
     "close": "Close",
     "brand_sub": "Parents Association",
     "donate": "Donate",
-    "aria_main": "Main"
+    "aria_main": "Main",
+    "festival": "🪁 Aug 29"
   },
   "hero": {
     "eyebrow": "Parents Association",
@@ -465,6 +466,26 @@
       "meta_type": "Non-Profit Organization",
       "scroll": "Scroll"
     },
+    "festival": {
+      "eyebrow": "Special event · CCSDS Community",
+      "title_line1": "Kite Festival 2026:",
+      "title_line2": "fly with your family!",
+      "lead": "A full Saturday to enjoy as a family: colorful kites, games, music and the best energy of our community. Every ticket and every donation go directly toward more opportunities for our children. See you at the sports field!",
+      "date_label": "Date",
+      "date_value": "Saturday, August 29, 2026",
+      "time_label": "Time",
+      "time_value": "8:00 a.m. – 4:00 p.m.",
+      "place_label": "Location",
+      "place_value": "Multi-purpose field, Colegio Campestre Santo Domingo Savio, Anolaima",
+      "cta_confirm": "Confirm attendance",
+      "cta_donate": "I want to donate",
+      "donar_eyebrow": "Help us make it happen",
+      "donar_title": "Your support makes this dream fly",
+      "donar_lead": "We invite all families to donate <strong>products for the cooperative sale</strong> (food, drinks, sweets) or a <strong>monetary contribution</strong> for prizes and festival logistics. Every donation, big or small, means more fun for our children and brings us closer to our projects as an association.",
+      "role_president": "President",
+      "role_treasurer": "Treasurer",
+      "note": "Temporary announcement, available on the site until the day of the event."
+    },
     "identidad": {
       "eyebrow": "Who we are",
       "title": "A parents' association, legally independent.",
@@ -514,8 +535,8 @@
       "eyebrow": "Life at the School",
       "title": "Moments that make our community great.",
       "lead": "Photos speak louder than any brochure. Here are the real days at CCSDS, captured by its own families.",
-      “tile1_title”: “”On the bleachers””,
-      “tile1_sub”: “Anolaima Municipal Stadium · Family day”,
+      "tile1_title": "“On the bleachers”",
+      "tile1_sub": "Anolaima Municipal Stadium · Family day",
       "tile2_title": "“Dances in Cachipay”",
       "tile2_sub": "Inter-school cultural festival",
       "tile3_title": "“August winds”",
@@ -524,8 +545,8 @@
       "tile4_sub": "Annual student production",
       "tile5_title": "“Families present”",
       "tile5_sub": "Family activity day",
-      “tile6_title”: “”Community in motion””,
-      “tile6_sub”: “Students, families and school — all as one”
+      "tile6_title": "“Community in motion”",
+      "tile6_sub": "Students, families and school — all as one"
     },
     "donar": {
       "eyebrow": "If you'd like to join us",

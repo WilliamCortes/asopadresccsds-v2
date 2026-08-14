@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Hero } from "@/components/sections/Hero";
+// TEMPORAL — quitar este import junto con <Festival /> abajo (ver notas en Festival.tsx)
+import { Festival } from "@/components/sections/Festival";
 import { AboutPreview } from "@/components/sections/AboutPreview";
 import { Problema } from "@/components/sections/Problema";
 import { ProjectTeaser } from "@/components/sections/ProjectTeaser";
@@ -24,6 +26,8 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <Hero locale={locale} />
+      {/* TEMPORAL — quitar junto con el import de arriba */}
+      <Festival />
       <AboutPreview />
       <Problema />
       <ProjectTeaser locale={locale} />

@@ -567,6 +567,138 @@ html { scroll-behavior: smooth; }
 .v2 .tile:hover .img-cover { transform: scale(1.04); }
 
 /* ============================================================
+   Nav — pill temporal (quitar junto con la sección Festival)
+   ============================================================ */
+
+.v2 .nav-link-festival {
+  background: var(--rojo);
+  color: #fff !important;
+  border-radius: 999px;
+  padding: 6px 14px !important;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.v2 .nav-link-festival::after { display: none; }
+.v2 .nav-link-festival:hover { background: var(--rojo-oscuro); color: #fff; }
+
+/* ============================================================
+   SECCIÓN TEMPORAL — Festival de Cometas
+   Quitar este bloque junto con components/sections/Festival.tsx,
+   su registro en app/[locale]/page.tsx, las claves
+   "home_v2.festival" en messages/*.json, y el pill del nav.
+   ============================================================ */
+
+.v2 .festival {
+  background: var(--dorado-suave);
+  border-top: 1px solid var(--dorado);
+  border-bottom: 1px solid var(--dorado);
+  position: relative;
+}
+
+.v2 .festival-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 56px;
+}
+@media (max-width: 900px) { .v2 .festival-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.v2 .festival-img {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 20px 60px -20px rgba(27,45,107,0.35);
+}
+
+.v2 .festival-content .eyebrow { color: var(--rojo); }
+.v2 .festival-content .eyebrow::before { background: var(--rojo); }
+.v2 .festival-content h2 { margin: 14px 0 18px; max-width: 16ch; }
+.v2 .festival-content h2 em { color: var(--rojo); font-style: italic; font-weight: 500; }
+.v2 .festival-content .lead { color: var(--piedra-claro); margin-bottom: 28px; max-width: 52ch; font-size: 16px; }
+
+.v2 .festival-meta {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding: 20px 24px;
+  background: var(--blanco);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: var(--radius-md);
+}
+.v2 .festival-meta li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(201,168,76,0.25);
+  padding-bottom: 12px;
+}
+.v2 .festival-meta li:last-child { border-bottom: none; padding-bottom: 0; }
+.v2 .festival-meta strong {
+  color: var(--azul);
+  font-family: var(--font-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  min-width: 70px;
+}
+.v2 .festival-meta span { color: var(--piedra); text-align: right; font-weight: 500; }
+
+.v2 .festival-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.v2 .festival-donar {
+  background: var(--blanco);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: var(--radius-md);
+  padding: 40px;
+  text-align: center;
+}
+.v2 .festival-donar .eyebrow { justify-content: center; color: var(--rojo); }
+.v2 .festival-donar .eyebrow::before { background: var(--rojo); }
+.v2 .festival-donar h3 { margin: 14px auto 14px; color: var(--azul); max-width: 30ch; }
+.v2 .festival-donar p { color: var(--piedra-claro); max-width: 64ch; margin: 0 auto 32px; }
+
+.v2 .festival-donar-contacts { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.v2 .contact-card {
+  background: var(--crema);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: var(--radius-sm);
+  padding: 20px 28px;
+  min-width: 220px;
+}
+.v2 .contact-card .role {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--dorado-oscuro);
+  margin-bottom: 6px;
+}
+.v2 .contact-card strong {
+  display: block;
+  color: var(--azul);
+  font-family: var(--font-display);
+  font-size: 19px;
+  margin-bottom: 4px;
+}
+.v2 .contact-card a { color: var(--rojo); text-decoration: none; font-weight: 500; font-size: 14px; }
+.v2 .contact-card a:hover { text-decoration: underline; }
+
+.v2 .festival-note {
+  text-align: center;
+  margin-top: 24px;
+  font-family: var(--font-legal);
+  font-size: 12px;
+  color: var(--piedra-claro);
+  font-style: italic;
+}
+
+/* ============================================================
    SECCIÓN 2 — Identidad
    ============================================================ */
 

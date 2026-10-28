@@ -51,8 +51,7 @@
     "close": "Cerrar",
     "brand_sub": "Asociación de Padres",
     "donate": "Donar",
-    "aria_main": "Principal",
-    "festival": "🪁 29 Ago"
+    "aria_main": "Principal"
   },
   "hero": {
     "eyebrow": "Asociación de Padres de Familia",
@@ -465,26 +464,6 @@
       "meta_ccf": "Inscripción CCF S0504820",
       "meta_type": "Entidad Sin Ánimo de Lucro",
       "scroll": "Scroll"
-    },
-    "festival": {
-      "eyebrow": "Evento especial · Comunidad CCSDS",
-      "title_line1": "Festival de Cometas 2026:",
-      "title_line2": "¡vuela con tu familia!",
-      "lead": "Un sábado completo para disfrutar en familia: cometas de colores, juegos, música y la mejor energía de nuestra comunidad. Cada entrada y cada donación se convierten directamente en más oportunidades para nuestros hijos. ¡Te esperamos en el campín!",
-      "date_label": "Fecha",
-      "date_value": "Sábado 29 de agosto de 2026",
-      "time_label": "Horario",
-      "time_value": "8:00 a.m. – 4:00 p.m.",
-      "place_label": "Lugar",
-      "place_value": "Campo de fútbol El Campín, Anolaima",
-      "cta_confirm": "Confirmar asistencia",
-      "cta_donate": "Quiero donar",
-      "donar_eyebrow": "Ayúdanos a hacerlo posible",
-      "donar_title": "Tu aporte hace volar este sueño",
-      "donar_lead": "Invitamos a todas las familias a donar <strong>productos para la venta de la cooperativa</strong> (comidas, bebidas, dulces) o un <strong>aporte en dinero</strong> para premios y logística del festival. Cada donación, grande o pequeña, se convierte en más diversión para nuestros niños y nos acerca a nuestros proyectos como asociación.",
-      "role_president": "Presidenta",
-      "role_treasurer": "Tesorera",
-      "note": "Invitación temporal, disponible en el sitio hasta el día del evento."
     },
     "identidad": {
       "eyebrow": "Quiénes somos",

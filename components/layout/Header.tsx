@@ -39,8 +39,6 @@ export function Header({ locale }: HeaderProps) {
 
   const localePath = (href: string) => `/${locale}${href}`;
   const donarHref = isHome ? "#donar" : `${localePath("/proyecto-cancha")}#donar`;
-  // TEMPORAL — quitar junto con components/sections/Festival.tsx (ver notas ahí)
-  const festivalHref = isHome ? "#festival-cometas" : `${localePath("")}#festival-cometas`;
 
   const closeDrawer = () => setDrawerOpen(false);
 
@@ -60,12 +58,6 @@ export function Header({ locale }: HeaderProps) {
 
           <nav aria-label={t("aria_main")}>
             <ul className="nav-links">
-              {/* TEMPORAL — quitar este <li> junto con la sección Festival */}
-              <li>
-                <a className="nav-link nav-link-festival" href={festivalHref}>
-                  {t("festival")}
-                </a>
-              </li>
               {NAV_LINKS.map(({ key, href }) => (
                 <li key={key}>
                   <Link
@@ -109,12 +101,6 @@ export function Header({ locale }: HeaderProps) {
           ×
         </button>
         <ul className="nav-drawer-links">
-          {/* TEMPORAL — quitar este <li> junto con la sección Festival */}
-          <li>
-            <a href={festivalHref} onClick={closeDrawer}>
-              {t("festival")}
-            </a>
-          </li>
           {NAV_LINKS.map(({ key, href }) => (
             <li key={key}>
               <Link href={localePath(href)} onClick={closeDrawer}>

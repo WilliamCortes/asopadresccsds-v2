@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import {
-  LayoutDashboard, FileText, Image, Settings,
-  TrendingUp, Users, DollarSign, Languages,
+  LayoutDashboard, FileText, Image,
+  TrendingUp, Users, DollarSign,
   LogOut, Shield
 } from "lucide-react";
-import "../globals.css";
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
+import { isAuthorizedAdmin } from "@/lib/auth/admin";
+import { signOut } from "../actions";
+import "../../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,14 +23,16 @@ const NAV_ITEMS = [
   { href: "/admin", icon: LayoutDashboard, label: "Dashboard" },
   { href: "/admin/comunicados", icon: FileText, label: "Comunicados" },
   { href: "/admin/imagenes", icon: Image, label: "Imágenes" },
-  { href: "/admin/contenido", icon: Settings, label: "Contenido" },
   { href: "/admin/proyecto", icon: TrendingUp, label: "Proyecto Cancha" },
   { href: "/admin/afiliados", icon: Users, label: "Afiliados" },
   { href: "/admin/donaciones", icon: DollarSign, label: "Donaciones" },
-  { href: "/admin/i18n", icon: Languages, label: "Textos i18n" },
 ];
 
-export default function AdminLayout({ children }: { children: React.ReactNode }) {
+export default async function AdminLayout({ children }: { children: React.ReactNode }) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!isAuthorizedAdmin(user)) redirect("/admin/login");
+
   return (
     <html lang="es" className={inter.className}>
       <body className="bg-gray-50 min-h-screen">
@@ -69,6 +75,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 <LogOut className="h-4 w-4" />
                 Ver sitio público
               </Link>
+              <form action={signOut}>
+                <button
+                  type="submit"
+                  className="w-full flex items-center gap-3 px-3 py-2 text-sm text-gray-500 rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  <LogOut className="h-4 w-4" />
+                  Cerrar sesión
+                </button>
+              </form>
             </div>
           </aside>
 

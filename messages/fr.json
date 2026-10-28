@@ -51,8 +51,7 @@
     "close": "Fermer",
     "brand_sub": "Association de Parents",
     "donate": "Faire un don",
-    "aria_main": "Principal",
-    "festival": "🪁 29 août"
+    "aria_main": "Principal"
   },
   "hero": {
     "eyebrow": "Association de Parents d'Élèves",
@@ -465,26 +464,6 @@
       "meta_ccf": "Inscription CCF S0504820",
       "meta_type": "Organisme à but non lucratif",
       "scroll": "Défiler"
-    },
-    "festival": {
-      "eyebrow": "Événement spécial · Communauté CCSDS",
-      "title_line1": "Festival des Cerfs-volants 2026 :",
-      "title_line2": "envolez-vous en famille !",
-      "lead": "Un samedi complet à profiter en famille : cerfs-volants colorés, jeux, musique et la meilleure énergie de notre communauté. Chaque entrée et chaque don se transforment directement en nouvelles opportunités pour nos enfants. Rendez-vous au terrain multisports !",
-      "date_label": "Date",
-      "date_value": "Samedi 29 août 2026",
-      "time_label": "Horaire",
-      "time_value": "8h00 – 16h00",
-      "place_label": "Lieu",
-      "place_value": "Terrain de football El Campín, Anolaima",
-      "cta_confirm": "Confirmer ma présence",
-      "cta_donate": "Je veux faire un don",
-      "donar_eyebrow": "Aidez-nous à le réaliser",
-      "donar_title": "Votre contribution fait décoller ce rêve",
-      "donar_lead": "Nous invitons toutes les familles à faire don de <strong>produits pour la vente de la coopérative</strong> (nourriture, boissons, friandises) ou d'une <strong>contribution en argent</strong> pour les prix et la logistique du festival. Chaque don, petit ou grand, se traduit par plus de plaisir pour nos enfants et nous rapproche de nos projets associatifs.",
-      "role_president": "Présidente",
-      "role_treasurer": "Trésorière",
-      "note": "Annonce temporaire, disponible sur le site jusqu'au jour de l'événement."
     },
     "identidad": {
       "eyebrow": "Qui sommes-nous",

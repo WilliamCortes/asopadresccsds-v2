@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ASOPADRES CCSDS
 
-## Getting Started
+Sitio web de la Asociación de Padres de Familia del Colegio Campestre Santo Domingo Savio (ASOPADRES CCSDS), Anolaima, Cundinamarca: https://www.asopadresccsds.org
 
-First, run the development server:
+Sitio trilingüe (es / en / fr) con información institucional, comunicados, afiliaciones, donaciones para el proyecto de la cancha cubierta y un panel de administración.
+
+## Stack
+
+- Next.js 15 (App Router) y TypeScript
+- Tailwind CSS
+- next-intl (traducciones en `messages/`)
+- Supabase (base de datos y autenticación, `@supabase/ssr`)
+- Pagos: Wompi y PayPal (webhooks en `app/api/webhooks`)
+- Correo: Resend
+
+## Desarrollo local
 
 ```bash
+npm ci
+cp .env.example .env.local   # completar los valores
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir http://localhost:3000. Otros comandos: `npm run build`, `npm run lint`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Variables de entorno
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Todas las variables están documentadas en `.env.example`. Nunca se versionan valores reales.
 
-## Learn More
+## Base de datos
 
-To learn more about Next.js, take a look at the following resources:
+Las migraciones de Supabase están en `supabase/migrations/` y se aplican en orden numérico (SQL editor de Supabase o CLI).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Despliegue
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Vercel, proyecto `asopadresccsds-v2`. La rama `main` despliega a producción; el resto de ramas generan previews. Las variables de entorno se configuran en Vercel.
 
-## Deploy on Vercel
+## Acceso al panel admin
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- URL: `/admin/login`
+- Los usuarios se crean en Supabase Auth (email y contraseña) con el email confirmado.
+- Además, el email debe estar en la variable `ADMIN_EMAILS` (lista separada por comas). Si está vacía, nadie tiene acceso.
